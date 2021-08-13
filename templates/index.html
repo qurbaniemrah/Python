@@ -1,1 +1,20 @@
 {% extends "layout.html" %}
+
+
+{% block body %}
+<br><br><br>
+<div class="jumbotron text-center">
+    <h3>Welcom to programming blog</h3>
+    <p>This is a our programming blog</p>
+    <ul>
+        {% for number in numbers  %}
+            <li>{{number}}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% if answer == "evet" %}
+<p>Answer is true</p>
+{% else %}
+<p>Wrong answer</p>
+{% endif %}
+{% endblock %}
